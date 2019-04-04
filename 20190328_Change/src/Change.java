@@ -35,6 +35,9 @@ public class Change {
 			}
 		}
 
+//		if나 switch 사용하지 않고 코딩하기 -> 배열로
+//		String[] weekdays = {"월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"};
+//		System.out.println(weekdays[inputString] - 1);
 	}
 
 }
