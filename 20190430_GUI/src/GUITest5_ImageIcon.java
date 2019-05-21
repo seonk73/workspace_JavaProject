@@ -23,6 +23,8 @@ public class GUITest5_ImageIcon {
 		//ImageIcon 크기 수정
 		ImageIcon smallcat2 = new ImageIcon(cat2.getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT));
 		JButton imageButton = new JButton(smallcat2);
+		imageButton.setRolloverIcon(cat); //마우스를 올리면 그림이 변화
+		imageButton.setPressedIcon(cat2); //마우스를 클릭하면 그림이 변화
 		
 		panel.add(imageLabel);
 		panel.add(imageButton);
