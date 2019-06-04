@@ -1,4 +1,5 @@
 import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -59,6 +60,8 @@ public class GUITest6_RockScissorsPaper {
 		rockButton.addActionListener(al);
 		paperButton.addActionListener(al);
 		
+		GridLayout gl = new GridLayout(1, 3);
+		panel.setLayout(gl);		
 		panel.add(result); //까먹지 말고 꼭 하기 !
 		panel.add(computerLabel);
 		panel.add(scissorsButton);
