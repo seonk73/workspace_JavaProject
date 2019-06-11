@@ -29,21 +29,23 @@ public class GUITest11_UpDown {
 			public void actionPerformed(ActionEvent e) {
 				//사용자 입력값 가져오자
 				String input = tfInput.getText();
+				tfInput.setText("");
 				int player = Integer.parseInt(input); //String -> int
 				//컴퓨터 값이랑 비교하자
 				
 				//결과 보여주자
 				if (player > computer) {
-					lbResult.setText("Down");
+					lbResult.setText(input + " ↓");
 				} else if (player < computer) {
-					lbResult.setText("UP");
+					lbResult.setText(input + " ↑");
 				} else {
-					lbResult.setText("정답입니다");
+					lbResult.setText(input + "! 정답입니다");
 					computer = random.nextInt(100 + 1);
 				} 
 			}
 		};
 		btQuestion.addActionListener(al);
+		tfInput.addActionListener(al);
 		
 		panel.add(tfInput);
 		panel.add(btQuestion);
